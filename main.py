@@ -5,8 +5,8 @@ app = FastAPI()
 
 @app.get("/customers")
 async def get_customers():
-    return JSONResponse(status_code=200, content={"message": "OK"})
+    return JSONResponse(status_code=200, content={"message": "Customers OK"})
 
-@app.get("/customers/status")
-async def get_customers_status():
+@app.get("/customers/health")
+async def get_customers_health():
     return JSONResponse(status_code=200, content={"status": "up"})
